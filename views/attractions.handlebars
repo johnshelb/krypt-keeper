@@ -1,0 +1,18 @@
+<h2 class="header">Attractions Near You</h2>
+<input type="text" placeholder="Search by Zipcode" />
+<button type="submit">Search</button>
+
+{{#each events as |event|}}
+<div id="event-card">
+
+
+    <h3 id="event-title">{{{eventtitle}}}</h3>
+
+    <h4 id="event-date">{{{eventdate}}}</h4>
+
+    <p id="event-desc">{{{eventdescription}}}</p>
+
+<button type="submit" id="faveBtn">Add to Favorites</button>
+
+</div>
+{{/each}}
