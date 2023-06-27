@@ -1,0 +1,42 @@
+[{
+    "name" : "Psycho Trail",
+    "address": "311 Harrison Avenue, Blackwood, NJ",
+    "cost" : "0",
+    "festival": "No"
+    
+},
+{
+    "name" : "BloodShed Farms",
+    "address": "Columbus Farmers Market, Gate 1, Southern Entrance 2919 Route 206, Columbus, NJ",
+    "cost" : "60",
+    "festival": "No"
+    
+},
+{
+    "name" : "Fright Factory",
+    "address": "2200 S. Swanson Street , Philadelphia, PA 19148 ",
+    "cost" : "25 ",
+    "festival": "No "
+},
+{
+    "name" : "Halloween Nights at Eastern State Penitentiary",
+    "address": "2027 Fairmount Ave, Philadelphia, PA 19130 ",
+    "cost" : "30 - 80 ",
+    "festival": "No "
+    
+},
+{
+    "name" : "Pennhurst Asylum",
+    "address": "250 Commonwealth Dr, Spring City, PA 19475 ",
+    "cost" : "52 - 150",
+    "festival": "No "
+    
+},
+{
+    "name" : "Bates Motel",
+    "address": "1835 Middletown Rd, Glen Mills, PA 19342 ",
+    "cost" : "40 - 125 ",
+    "festival": "No "
+    
+}
+]
