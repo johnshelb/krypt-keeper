@@ -1,24 +1,20 @@
 const express = require('express');
-const routes = require('controllers/api/index');
+const routes = require('controllers');
 const app = express();
 const exphb = require("express-handlebars");
 const hbs = exphb.create();
+const path = require("path");
 
 const PORT = process.env.PORT || 8888;
 
 app.engine("handlebars", hbs.engine);
-app.set("view engine", "handlebars")
-app.use(express.json())
-app.use(express.static("public"))
+app.set("view engine", "handlebars");
+app.use(express.json());
+app.use(express.urlencoded({ extended:true}));
+app.use(express.static(path.join(__dirname,"public")));
 
-// const termData = require('./db/terms.json');
-
-app.use(express.static('public'));
 
 app.use(routes);
 
 
-
-// app.get('/api/terms', (req, res) => res.json(termData));
-
-app.listen(PORT, () => console.log("Server is Running!"))
+app.listen(PORT, () => console.log("Server is Running!" + ` ${PORT}`))
