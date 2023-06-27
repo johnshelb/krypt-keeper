@@ -1,0 +1,17 @@
+<h2 class="header">Saved Events</h2>
+
+{{#each savedEvents as |savedevent|}}
+<div id="event-card">
+
+
+    <h3 id="event-title">{{{eventtitle}}}</h3>
+
+    <h4 id="event-date">{{{eventdate}}}</h4>
+
+    <p id="event-desc">{{{eventdescription}}}</p>
+
+<button type="submit" id="faveBtn">Add to Favorites</button>
+
+</div>
+{{/each}}
+
