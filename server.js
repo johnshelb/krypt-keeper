@@ -1,5 +1,7 @@
 const express = require('express');
-const routes = require('controllers');
+
+const routes = require('./controllers');
+
 const app = express();
 const exphb = require("express-handlebars");
 const hbs = exphb.create();
