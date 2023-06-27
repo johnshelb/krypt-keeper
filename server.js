@@ -13,7 +13,6 @@ app.use(express.static("public"))
 
 // const termData = require('./db/terms.json');
 
-
 app.use(express.static('public'));
 
 app.use(routes);

@@ -1,12 +1,25 @@
 {
+  "name": "krypt-keeper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
   "dependencies": {
+    "bcrypt": "^5.1.0",
+    "daemon": "^1.1.0",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
-    "handlebars": "^4.7.7",
     "init": "^0.1.2",
-    "leaflet": "^1.9.4"
+    "leaflet": "^1.9.4",
+    "mysql2": "^3.4.2",
+    "sequelize": "^6.32.1"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.22"
-  }
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
