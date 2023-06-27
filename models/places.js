@@ -1,41 +1,34 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Book extends Model {}
+class Places extends Model {}
 
-Book.init(
+Places.init(
   {
-    book_id: {
-      type: DataTypes.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
-    },
     name: {
+      type: DataTypes.STRING,
+      
+    },
+    address: {
       type: DataTypes.STRING
     },
-    author: {
-      type: DataTypes.STRING
-    },
-    isbn: {
-      type: DataTypes.STRING
-    },
-    pages: {
+    cost: {
       type: DataTypes.INTEGER
     },
-    edition: {
-      type: DataTypes.INTEGER
-    },
-    is_paperback: {
+    
+    is_festival: {
       type: DataTypes.BOOLEAN
-    }
+    },
+    
+    
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'book'
+    modelName: 'places'
   }
 );
 
-module.exports = Book;
+module.exports = Places;
