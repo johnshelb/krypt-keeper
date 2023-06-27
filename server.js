@@ -1,5 +1,5 @@
 const express = require('express');
-const routes = require('./controllers/api/index');
+const routes = require('controllers/api/index');
 const app = express();
 const exphb = require("express-handlebars");
 const hbs = exphb.create();

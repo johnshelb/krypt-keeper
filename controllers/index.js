@@ -7,3 +7,6 @@ router.get('/', (req, res) => {
     // sends a home.html file to the browser
     res.sendFile(path.join(__dirname, 'views', 'layout', 'main.handlebars'));
   });
+
+
+  // module.exports = 
