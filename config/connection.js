@@ -10,6 +10,7 @@ let sequelize = new Sequelize(
         host: "localhost",
         dialect: "mysql",
         port: 8888
+
     }
 )
 module.exports=sequelize;
