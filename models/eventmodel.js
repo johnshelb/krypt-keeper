@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Events extends Model {}
+class Places extends Model {}
 
 
-Plas.init(
+Places.init(
   {
     name: {
       type: DataTypes.STRING,
