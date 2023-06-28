@@ -1,26 +1,38 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Events extends Model {}
 
+class Event extends Model {}
 
-Plas.init(
+Event.init(
+
   {
-    name: {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoincrement: true
+    },
+    title: {
       type: DataTypes.STRING,
-
+      allowNull: false
+    },
+    description: {
+      type: DataTypes.STRING,
+    },
+    price: {
+      type: DataTypes.INTEGER,
     },
     address: {
       type: DataTypes.STRING
     },
-    cost: {
-      type: DataTypes.INTEGER
-    },
-
-    is_festival: {
-      type: DataTypes.BOOLEAN
-    },
-
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user", 
+        key: "id"
+      }
+    }
 
   },
   {
@@ -28,8 +40,10 @@ Plas.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'places'
+    modelName: "event"
   }
-);
+)
 
-module.exports = Places;
+module.exports = Event
+
+
