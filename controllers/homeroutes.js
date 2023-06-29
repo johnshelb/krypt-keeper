@@ -12,6 +12,9 @@ router.get("/login", async (req,res) => {
    // res.send("The goose is watching")
 })
 
+
+
+
 router.get("/singleAttraction/:id", async (req, res) => {
     try {
         res.render("singleAttraction", {
