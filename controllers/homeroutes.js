@@ -1,11 +1,12 @@
 // Routing and rendering page
-
 const router = require("express").Router()
 
 
 router.get("/", async (req,res) => {
-    res.send("Test")
+    res.send("The goose is watching")
 })
+
+
 
 
 
