@@ -26,7 +26,23 @@ router.get("/singleAttraction/:id", async (req, res) => {
     }
 })
 
+//login/signup routes
 
+router.get("/login", (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect("/home")
+        return
+    }
+    res.render("login")    
+})
+
+router.get("/signUp", (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect("/home")
+        return
+    }
+    res.render("signUp")
+})
 
 // path to models folder   
 
