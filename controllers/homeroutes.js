@@ -1,10 +1,15 @@
 // Routing and rendering page
-
 const router = require("express").Router()
 
 
 router.get("/", async (req,res) => {
-    res.send("Test")
+    res.render("home");
+   // res.send("The goose is watching")
+})
+
+router.get("/login", async (req,res) => {
+    res.render("login");
+   // res.send("The goose is watching")
 })
 
 router.get("/singleAttraction/:id", async (req, res) => {
@@ -20,6 +25,8 @@ router.get("/singleAttraction/:id", async (req, res) => {
         res.status(500).json(error)
     }
 })
+
+
 
 // path to models folder   
 

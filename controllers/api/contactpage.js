@@ -1,10 +1,10 @@
+// Routing and rendering page
 const router = require("express").Router()
 
 
 router.get("/", async (req,res) => {
-    res.send("The goose needs a login")
+    res.send("This is the contact page")
 })
-
 
 
 module.exports = router;
