@@ -5,4 +5,8 @@ Event.belongsTo(User, {
     foreignKey: "user_id"
 });
 
+User.hasMany(Event, {
+    foreignKey: "user_id"
+})
+
 module.export = {Event, User}
