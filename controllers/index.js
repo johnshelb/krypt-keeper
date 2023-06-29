@@ -4,7 +4,7 @@ const homeroutes = require("./homeroutes.js")
 const userRoutes = require ("./api/userRoutes.js")
 const contactpage = require("./api/contactpage.js")
 
-router.use("/homeroutes" , homeroutes);
+router.use("/" , homeroutes);
 
 router.use("/userRoutes", userRoutes);
 

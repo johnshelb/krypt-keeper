@@ -20,6 +20,9 @@ Event.init(
     description: {
       type: DataTypes.STRING,
     },
+    date: {
+      type: DataTypes.DATE
+    },
     price: {
       type: DataTypes.INTEGER,
     },

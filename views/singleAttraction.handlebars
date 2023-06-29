@@ -1,13 +1,19 @@
+
+    <div id="map"> </div>
+    
+
+
 <div>
-    <h2 class="header" id="event-name">{{attractiontitle}}</h2>
+    <h2 class="header" id="event-name">{{title}}</h2>
 
     <h3>{{date}}</h3>
 
-    <p id="event-desc">{{eventdescription}}</p>
+    <p id="event-desc">{{description}}</p>
 
-    <button type="submit" id="faveBtn">Add To Favorites</button>
+    <button id="faveBtn" data-title="{{title}}" data-desc="{{description}}" data-price="{{price}}" data-date="{{date}}" data-address="{{address}}">Add To Favorites</button>
 </div>
 
 <div id="map-area">
     {{!-- map data here --}}
 </div>
+<script src="/js/singleAttraction.js"></script>
