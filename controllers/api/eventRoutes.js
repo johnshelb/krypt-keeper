@@ -33,4 +33,11 @@ app.post('/api/reviews', (req, res) => {
 });
 
 
-module.exports ={  router }
+router.get("/", async (req,res) => {
+    res.send("The events")
+})
+
+
+
+
+module.exports = router
