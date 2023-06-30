@@ -14,9 +14,6 @@ router.get("/login", async (req,res) => {
 })
 
 
-
-
-
 // Specific attraction example 
 
 router.get("/singleAttraction/:id", async (req, res) => {

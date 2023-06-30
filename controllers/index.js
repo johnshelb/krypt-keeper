@@ -1,9 +1,13 @@
 const router = require('express').Router();
 
+// Variables for each route
+
 const homeroutes = require("./homeroutes.js")
 const userRoutes = require ("./api/userRoutes.js")
 const contactpage = require("./api/contactpage.js")
 const eventRoutes = require("./api/eventRoutes.js")
+
+// Created paths 
 
 router.use("/" , homeroutes);
 
