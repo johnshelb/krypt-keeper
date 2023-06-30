@@ -1,5 +1,5 @@
-const router = require("express").Router()
-const { Event } = require("../../models");
+const router = require("express").Router();
+const Event = require("../../models/eventmodel");
 
 
 //create event route to create event, post method
