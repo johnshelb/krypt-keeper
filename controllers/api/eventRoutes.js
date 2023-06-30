@@ -25,19 +25,9 @@ router.get('/' , async(req, res ) => {
     }
 });
 
-// POST request
-app.post('/api/reviews', (req, res) => {
-  // Let the client know that their POST request was received
-  res.json(`${req.method} request received`);
-
-});
-
-
 router.get("/", async (req,res) => {
     res.send("The events")
 })
-
-
 
 
 module.exports = router
