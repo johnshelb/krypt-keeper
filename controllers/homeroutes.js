@@ -7,6 +7,7 @@ router.get("/", async (req,res) => {
    // res.send("The goose is watching")
 })
 
+
 router.get("/login", async (req,res) => {
     res.render("login");
    // res.send("The goose is watching")
@@ -14,6 +15,9 @@ router.get("/login", async (req,res) => {
 
 
 
+
+
+// Specific attraction example 
 
 router.get("/singleAttraction/:id", async (req, res) => {
     try {

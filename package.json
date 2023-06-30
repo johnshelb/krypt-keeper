@@ -16,11 +16,10 @@
     "sequelize": "^6.32.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "devStart": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Group 5: Upenn BootCamp",
   "license": "ISC"
 }
