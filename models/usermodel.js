@@ -23,8 +23,19 @@ User.init({
         type: DataTypes.STRING,
         allowNull: false,
         validate: {
-            len: [10]
-        }
+            len: [1]
+        },
+    },
+    favorited_events: {
+      type: DataTypes.TEXT,
+      defaultValue: '[]',
+      // get() {
+      //   const value = this.getDataValue('favorited_events');
+      //   return value ? JSON.parse(value) : [];
+      // },
+      // set(value) {
+      //   this.setDataValue('favorited_events', JSON.stringify(value));
+      // }
     },
 },
     {

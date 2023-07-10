@@ -1,37 +1,25 @@
 const router = require("express").Router();
-const Event = require("../../models/eventmodel");
+const { Event } = require("../../models");
 
 
-// create event route to create event, post method
-
-
-router.get('/' , async(req, res ) => {
+router.get('/attractions' , async(req, res ) => {
     try {
-        const eventsDB = await Event.findAll({
-            include: [
-                {
-                    model: Event,
-                    attributes: [ "name", "address", "cost"]
-                }
-            ]
-        })
-        const events = eventsDB.map((event1) => 
+        const eventsDB = await Event.findAll()
+        const events = eventsDB.map((event1) =>
         event1.get({ plain: true }));
+        console.log("I am logged in: " + req.session.logged_in)
+        console.log("here is the current user id");
+        console.log(req.session.user_id);
         res.render("attractions", {
-            events, 
-            loggedIn: req.session.loggedIn
+            events,
+            logged_in: req.session.logged_in,
+            thisUser:req.session.user_id
         })
     } catch (error) {
         console.log(error)
         res.status(500).json(error)
     }
 });
-
-
-
-router.get("/", async (req,res) => {
-    res.send("The events")
-})
 
 
 module.exports = router

@@ -1,29 +1,27 @@
 // Routing and rendering page
 const router = require("express").Router()
+const {Event} = require('../models')
 
 
-router.get("/", async (req,res) => {
-    res.render("home");
-   // res.send("The goose is watching")
+
+
+
+router.get("/", (req,res) => {
+    res.render("home",{
+      logged_in: req.session.logged_in
+    });
 })
 
-
-router.get("/login", async (req,res) => {
-    res.render("login");
-   // res.send("The goose is watching")
-})
-
-
-// Specific attraction example 
+// Specific attraction example
 
 router.get("/singleAttraction/:id", async (req, res) => {
+  console.log(req.session.user_id);
     try {
-        res.render("singleAttraction", {
-            title: "SpookyZone", 
-            description: "It's Spooky!",
-            price: "$3,00000",
-            address: "nowhere",
-            date: "June 30"
+        const attraction = await Event.findByPk(req.params.id)
+        res.render("singleAttraction",{
+          ...attraction.dataValues,
+          logged_in:req.session.logged_in,
+          user_id:req.session.user_id
         })
     } catch (error) {
         res.status(500).json(error)
@@ -34,21 +32,21 @@ router.get("/singleAttraction/:id", async (req, res) => {
 
 router.get("/login", (req, res) => {
     if (req.session.logged_in) {
-        res.redirect("/home")
+        res.redirect("/")
         return
     }
-    res.render("login")    
+    res.render("login")
 })
 
 router.get("/signUp", (req, res) => {
     if (req.session.logged_in) {
-        res.redirect("/home")
+        res.redirect("/")
         return
     }
     res.render("signUp")
 })
 
-// path to models folder   
+// path to models folder
 
 
 module.exports = router;

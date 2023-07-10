@@ -5,12 +5,13 @@
     min-width: 100%;
     min-height: 100%;
     object-fit: cover;
+    z-index: -1;
 }
 
 #attractions {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .user_section {
@@ -25,24 +26,28 @@
 }
 
 .test {
-    
+
     font-size: xx-large;
     background: none;
-    color: white;
+    /* color: white; */
+    color: blue;
+
     font-weight: 700;
-    mix-blend-mode: overlay;
+    /* mix-blend-mode: overlay; */
     padding: 5px 5px;
     text-align: center;
 }
 
 
 .title {
-    
+
     font-size: xx-large;
     background: none;
-    color: white;
+    /* color: white; */
+    color: blue;
+
     font-weight: 700;
-    mix-blend-mode: overlay;
+    /* mix-blend-mode: overlay; */
     padding: 5px 5px;
     text-align: center;
 }
@@ -54,8 +59,8 @@
     background: none;
     color: white;
     font-weight: 700;
-    mix-blend-mode: overlay;
-    
+    /* mix-blend-mode: overlay; */
+
 }
 
 
@@ -65,7 +70,7 @@
     background: none;
     color: white;
     font-weight: 700;
-    mix-blend-mode: overlay;
+    /* mix-blend-mode: overlay; */
     padding: 1px 1px;
     text-align: center;
 }

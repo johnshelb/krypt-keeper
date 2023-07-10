@@ -11,7 +11,7 @@ Event.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoincrement: true
+      autoIncrement: true
     },
     title: {
       type: DataTypes.STRING,
@@ -32,7 +32,7 @@ Event.init(
     user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: "user", 
+        model: "user",
         key: "id"
       }
     }
@@ -48,5 +48,3 @@ Event.init(
 )
 
 module.exports = Event
-
-
